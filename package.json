@@ -1,0 +1,31 @@
+{
+  "name": "sweet-apple",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": "https://github.com/MatheusIshiyama/sweet-apple.git",
+  "author": "Matheus Ishiyama <matheus.ishiyama@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "framer-motion": "^11.5.6",
+    "next": "^14.2.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.5.5",
+    "@types/react": "^18.3.8",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.13",
+    "typescript": "^5.5.4"
+  }
+}
