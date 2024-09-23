@@ -1,0 +1,27 @@
+import type { StackProps } from '@chakra-ui/react';
+import { HStack, Icon, useColorModeValue } from '@chakra-ui/react';
+import * as React from 'react';
+import { FaStar } from 'react-icons/fa';
+
+interface Props {
+  defaultValue?: number;
+  max?: number;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  rootProps?: StackProps;
+}
+
+export function Rating(props: Props) {
+  const { defaultValue = 0, max = 5, size = 'md', rootProps } = props;
+
+  const color = useColorModeValue('gray.400', 'gray.500');
+  const activeColor = useColorModeValue('yellow.500', 'yellow.200');
+  return (
+    <HStack spacing="0.5" {...rootProps}>
+      {Array.from({ length: max })
+        .map((_, index) => index + 1)
+        .map((index) => (
+          <Icon key={index} as={FaStar} fontSize={size} color={index <= defaultValue ? activeColor : color} />
+        ))}
+    </HStack>
+  );
+}
